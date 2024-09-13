@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid red;
+            background-color: white;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-header {
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 24px;
+            position: relative;
+            grid-column: span 3;
+        }
+
+        .form-header img {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            width: 80px;
+        }
+
+        .form-section {
+            padding: 20px;
+            border: 1px solid red;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            font-weight: bold;
+            color: red;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"], input[type="email"], input[type="date"], input[type="file"], select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .invalid-feedback {
+            color: red;
+            font-size: 12px;
+        }
+
+        .form-submit {
+            background-color: red;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="form-header">ONLINE FLIGHT BOOKING FORM
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Ryanair_logo.svg" alt="Logo">
+        </h2>
+  
+        <!-- Passenger Information Form -->
+        <div class="form-section">
+            <h3 class="section-title">PASSENGER INFORMATION</h3>
+            <form method="POST" enctype="multipart/form-data">
+                <label for="visa_document">Full Name *</label>
+                <input type="text" id="visa_document" name="visa_document">
+                <div class="invalid-feedback">Invalid field</div>
+
+                <label for="dob">Date of Birth *</label>
+                <input type="date" id="dob" name="dob">
+                <div class="invalid-feedback">Invalid field</div>
+
+                <label for="nationality">Nationality *</label>
+                <input type="text" id="nationality" name="nationality" placeholder="Enter your nationality">
+                <div class="invalid-feedback">Invalid field</div>
+
+               
+            </form>
+        </div>
+
+        <!-- Contact Information Form -->
+        <div class="form-section">
+            <h3 class="section-title">CONTACT INFORMATION</h3>
+            <form method="POST" enctype="multipart/form-data">
+                <label for="visa_document">Phone Number *</label>
+                <input type="text" id="phonenumber" name="phonepnumber">
+                <div class="invalid-feedback">Invalid field</div>
+                <label for="pobox">P.O. BOX Number *</label>
+                <input type="text" id="pobox" name="pobox" placeholder="Enter P.O. BOX number">
+                <div class="invalid-feedback">Invalid field</div>
+
+                <label for="emergency_phone">Emergency Phone Number *</label>
+                <input type="text" id="emergency_phone" name="emergency_phone" placeholder="Enter emergency phone number">
+                <div class="invalid-feedback">Invalid field</div>
+
+             
+            </form>
+        </div>
+
+        <!-- Flight Information Form -->
+        <div class="form-section">
+            <h3 class="section-title">FLIGHT INFORMATION</h3>
+            <form method="POST" enctype="multipart/form-data">
+                <label for="">Passport *</label>
+                <input type="text" id="passport" name="passport">
+                <div class="invalid-feedback">Invalid field</div>
+
+                <label for="visa_document">Visa Document *</label>
+                <input type="file" id="visa_document" name="visa_document">
+                <div class="invalid-feedback">Invalid field</div>
+
+                <label for="departure_city">Departure City *</label>
+                <input type="text" id="departure_city" name="departure_city" placeholder="Enter departure city">
+                <div class="invalid-feedback">Invalid field</div>
+
+                <label for="destination_city">Destination City *</label>
+                <input type="text" id="destination_city" name="destination_city" placeholder="Enter destination city">
+                <div class="invalid-feedback">Invalid field</div>
+
+                
+            </form>
+        
+        </div>
+        <button type="submit" class="form-submit">SUBMIT FLIGHT INFO</button>
+    </div>
+         >
+        
+</body>
+</html>
